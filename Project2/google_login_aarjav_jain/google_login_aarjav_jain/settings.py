@@ -14,7 +14,7 @@ import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
+TEMPLATE_DIR = os.path.join(BASE_DIR, 'templates')
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
@@ -37,7 +37,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'login',
     'social_django',
 ]
 
@@ -56,7 +55,7 @@ ROOT_URLCONF = 'google_login_aarjav_jain.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [TEMPLATE_DIR, ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -117,39 +116,13 @@ SOCIAL_AUTH_URL_NAMESPACE = 'social'
 #     'social_django.context_processors.login_redirect',
 # ]
 
-SOCIAL_AUTH_PIPELINE = (
-'social.pipeline.social_auth.social_details',
-'social.pipeline.social_auth.social_uid',
-'social.pipeline.social_auth.social_allowed',
-'social.pipeline.social_auth.social_user',
-'social.pipeline.user.get_username',
-'social.pipeline.user.create_user',
-'social.pipeline.social_auth.social_associate_user'
-'social.pipeline.debug.debug',
-'social.pipeline.social_auth.load_extra_data',
-'social.pipeline.user.user_details',
-'social.pipeline.debug.debug',
-)
-
-SOCIAL_AUTH_GOOGLE_OAUTH2_IGNORE_DEFAULT_SCOPE = True
-SOCIAL_AUTH_GOOGLE_OAUTH2_SCOPE = [
-'https://www.googleapis.com/auth/userinfo.email',
-'https://www.googleapis.com/auth/userinfo.profile'
-]
-# Google+ SignIn (google-plus)
-SOCIAL_AUTH_GOOGLE_PLUS_IGNORE_DEFAULT_SCOPE = True
-SOCIAL_AUTH_GOOGLE_PLUS_SCOPE = [
-'https://www.googleapis.com/auth/plus.login',
-'https://www.googleapis.com/auth/userinfo.email',
-'https://www.googleapis.com/auth/userinfo.profile'
-]
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.1/topics/i18n/
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Kolkata'
 
 USE_I18N = True
 
@@ -164,7 +137,7 @@ USE_TZ = True
 LOGIN_URL = 'login'
 LOGIN_REDIRECT_URL = 'home'
 
-SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '1025270473021-4nisecd1sfb9h4bl6s1v413tstncq98i.apps.googleusercontent.com'
-SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = 'y-fBfwR6jsqhExyYok5VK-7o'
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = ''
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = ''
 
 STATIC_URL = '/static/'
