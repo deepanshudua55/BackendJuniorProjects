@@ -9,4 +9,4 @@
 
 
 [Project 2](https://github.com/Polaris000/BackendJuniorProjects/tree/master/Project2) 
-> Status: Ongoing  (0 / 5)  
+> Status: Ongoing  (1 / 5)  
