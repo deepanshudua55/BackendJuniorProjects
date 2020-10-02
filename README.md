@@ -1,4 +1,4 @@
-# Assignments attempted by the Backend freshers 2018
+# Assignments attempted by the Backend freshers 2018.
 
 [Recruitment Test](https://github.com/Polaris000/BackendJuniorProjects/tree/master/Recruitment_Test) 
 > Status: Complete  (5 / 5)  
